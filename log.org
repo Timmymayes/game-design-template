@@ -1,0 +1,18 @@
+#+TITLE: GAME NAME: Design Log
+#+AUTHOR: Tyler
+#+STARTUP: overview
+
+Newest entry at the top. One entry per working session or decision.
+
+* Decisions
+Choices that are settled, with the reason, so they do not get reopened by accident.
+| Date       | Decision | Why |
+|------------+----------+-----|
+| YYYY-MM-DD |          |     |
+
+* Log
+** YYYY-MM-DD Short title
+- Changed ::
+- Why ::
+- Rules version after change ::
+- Follow up ::

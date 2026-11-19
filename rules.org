@@ -1,0 +1,16 @@
+#+TITLE: GAME NAME: Rules
+#+AUTHOR: Tyler
+#+STARTUP: overview
+
+Rules version: 0.1
+Written for players. Design reasoning belongs in [[file:game.org][game.org]].
+
+* Overview and Goal
+* Components
+* Setup
+* Turn Structure
+* Actions
+* End of Game and Scoring
+* Reference
+** Icons and Terms
+** Edge Cases

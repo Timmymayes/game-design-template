@@ -1,0 +1,71 @@
+#+TITLE: Game Template
+#+AUTHOR: Tyler
+
+Starting structure for a new tabletop game design. Every game repo begins as a copy of this one, so all games share the same files, folders and conventions.
+
+* Starting a New Game
+1. On GitHub, click *Use this template* and name the new repo after the game.
+2. Clone the new repo.
+3. Replace =GAME NAME= in the title line of [[file:game.org][game.org]], [[file:rules.org][rules.org]] and [[file:log.org][log.org]].
+4. Delete everything in this README above the *Game README Starter* heading, then fill in what is left.
+5. Start writing in the Overview section of =game.org=.
+
+* Structure
+#+begin_example
+game-name/
+├── README.org       pitch, status, links
+├── game.org         design doc: systems, components, data, build
+├── rules.org        player-facing rules, exports to PDF
+├── log.org          decisions table and dated design log
+├── playtests/       index.org plus one file per session
+├── assets/          hand-made inputs: icons/, art/, fonts/
+├── media/           photos, screenshots, reference images
+├── build/           generated output (tts/, pnp/), not committed
+└── archive/         retired ideas and old versions
+#+end_example
+
+* What Goes Where
+- =game.org= :: The source of truth. Systems, components and the data tables that fill them. Anything the build reads lives here.
+- =rules.org= :: Written for players. No design reasoning.
+- =log.org= :: Why things changed. Settled decisions go in the table at the top, session notes go below it, newest first.
+- =playtests/= :: One file per session, copied from =playtest-template.org= and named =YYYY-MM-DD-mode-NN.org=, for example =2026-11-19-solo-01.org=. Add a link to each one in =playtests/index.org=.
+- =assets/= :: Files that end up printed on a component.
+- =media/= :: Files that document the game: table photos, screenshots, reference.
+- =build/= :: Anything generated. Safe to delete at any time, since it can be rebuilt from =game.org=.
+- =archive/= :: Things that were cut but are worth keeping.
+
+* Conventions
+- Status keywords :: Systems and components carry one of =IDEA=, =DRAFT=, =TESTING=, =STABLE= or =CUT=.
+- IDs :: Systems use a =CUSTOM_ID= starting with =sys-=, components start with =cmp-=, and data tables use a =#+NAME= starting with =tbl-=.
+- Links :: Refer to systems and components with =[[#sys-name]]= and =[[#cmp-name]]= so everything can be jumped to.
+- Dates :: Always =YYYY-MM-DD=, zero-padded, so files sort in order.
+- Rules version :: Bump the version line in =rules.org= when the rules change, and record that version in each playtest file.
+
+* Vocabulary
+| Term      | Meaning                                                          |
+|-----------+------------------------------------------------------------------|
+| Format    | A physical shape and size, such as a poker card or a hex tile    |
+| Layout    | A set of named slots arranged on a format                        |
+| Slot      | One piece of information on a layout, such as a title or a cost  |
+| Component | A format, a layout and a data table, such as a deck of cards     |
+| Zone      | A place on a board or mat where things go                        |
+| Target    | A kind of output, such as Tabletop Simulator or print-and-play   |
+
+* Changing the Template
+When a change to the structure proves itself in a real game, copy it back here. Existing games do not update automatically.
+
+* Game README Starter
+Keep this section and delete everything above it.
+
+** GAME NAME
+One or two sentences on what players do and why it is fun.
+
+| Players  |   |
+| Playtime |   |
+| Status   | Idea / Prototype / Playtesting |
+
+** Links
+- [[file:game.org][Design doc]]
+- [[file:rules.org][Rules]]
+- [[file:log.org][Design log]]
+- [[file:playtests/index.org][Playtests]]

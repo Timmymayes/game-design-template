@@ -1,0 +1,30 @@
+#+TITLE: Playtest NN
+#+DATE: YYYY-MM-DD
+
+| Players       |   |
+| Mode          | solo / in person / TTS |
+| Rules version |   |
+| Length        |   |
+
+* Testing Criteria
+What this session is meant to answer.
+- 
+
+* Changes Since Last Test
+- 
+
+* Result
+| Player | Score |
+|--------+-------|
+|        |       |
+
+* Observations
+What happened at the table, before any interpretation.
+- 
+
+* Feedback
+** Player Name
+- 
+
+* Actions
+- [ ] 

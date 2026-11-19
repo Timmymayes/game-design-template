@@ -1,0 +1,15 @@
+# Generated output
+build/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Python (for later)
+__pycache__/
+.venv/

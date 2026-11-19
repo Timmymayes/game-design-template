@@ -1,0 +1,125 @@
+#+TITLE: GAME NAME: Design Doc
+#+AUTHOR: Tyler
+#+STARTUP: overview
+#+TODO: IDEA DRAFT TESTING | STABLE CUT
+
+* About This Doc
+This file is the source of truth for the game. Rules for players live in [[file:rules.org][rules.org]], dated history lives in [[file:log.org][log.org]].
+
+Conventions:
+- Every system and component heading carries a status keyword: IDEA, DRAFT, TESTING, STABLE or CUT.
+- Every system has a =CUSTOM_ID= starting with =sys-=, every component one starting with =cmp-=, every data table a =#+NAME= starting with =tbl-=.
+- Link between them with =[[#sys-name]]= and =[[#cmp-name]]= so anything can be jumped to and found.
+- Shared vocabulary: a /format/ is a physical shape and size, a /layout/ is a set of named /slots/ on a format, a /zone/ is a place on a board or mat where things go.
+
+* Overview
+** Pitch
+One or two sentences. What do players do, and why is it fun?
+
+** Facts
+| Players  |   |
+| Playtime |   |
+| Age      |   |
+| Weight   |   |
+
+** Inspirations
+- Game: what is being borrowed from it
+
+** Design Goals
+What the game should feel like, and what it is deliberately not.
+- 
+
+** Glossary
+Game terms, defined once and used the same way everywhere.
+| Term | Meaning |
+|------+---------|
+|      |         |
+
+* Systems
+** Resources and Flow
+Everything players gain, spend or track.
+#+NAME: tbl-resources
+| Resource | Gained from | Spent on | Tracked by | Notes |
+|----------+-------------+----------+------------+-------|
+|          |             |          |            |       |
+
+** Turn and Round Structure
+The skeleton that the systems hang on: phases, turn order, what triggers the end of the game.
+
+** IDEA Example System
+:PROPERTIES:
+:CUSTOM_ID: sys-example
+:END:
+- Purpose :: Why this system exists and what decision it gives players.
+- Inputs :: What flows in (resources, cards, workers).
+- Outputs :: What flows out.
+- Components :: [[#cmp-example-deck]]
+- Touches :: Other systems this one feeds or depends on.
+
+*** How It Works
+Plain description of the mechanism.
+
+*** Open Questions
+- [ ] 
+
+* Components
+Run =C-c C-c= on the block below to rebuild the summary from the property drawers.
+
+#+BEGIN: columnview :id local :maxlevel 2 :skip-empty-rows t :format "%30ITEM(Component) %TODO(Status) %TYPE %FORMAT %LAYOUT %DATA %QTY"
+#+END:
+
+** IDEA Example Deck
+:PROPERTIES:
+:CUSTOM_ID: cmp-example-deck
+:TYPE: deck
+:FORMAT: poker-portrait
+:LAYOUT: tbd
+:BACK: tbd
+:DATA: tbl-example-deck
+:QTY: 0
+:SYSTEM: sys-example
+:END:
+What this component is for and how players handle it.
+
+*** Slots
+What needs to be readable on the face. This list becomes the layout.
+| Slot  | Kind | Notes |
+|-------+------+-------|
+| title | text |       |
+| cost  | icon |       |
+
+** IDEA Example Board
+:PROPERTIES:
+:CUSTOM_ID: cmp-example-board
+:TYPE: board
+:FORMAT: tbd
+:LAYOUT: tbd
+:QTY: 1
+:SYSTEM: sys-example
+:END:
+What this board is for.
+
+*** Zones
+Places where things go.
+| Zone | Kind         | Holds | Capacity | Notes |
+|------+--------------+-------+----------+-------|
+|      | action space |       |          |       |
+|      | deck slot    |       |          |       |
+|      | track        |       |          |       |
+
+* Data
+One table per component that has per-item content. One row is one card, tile or token.
+
+#+NAME: tbl-example-deck
+| id | name | qty | cost | text |
+|----+------+-----+------+------|
+|    |      |     |      |      |
+
+* Build
+Empty for now. Once the toolkit exists, the blocks that produce Tabletop Simulator and print-and-play output go here.
+
+* Open Questions
+- [ ] 
+
+* Parking Lot
+Ideas that are not in the game right now but are worth keeping.
